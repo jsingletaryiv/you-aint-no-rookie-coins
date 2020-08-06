@@ -1,4 +1,8 @@
+# YouAintNoRookie - Coins
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+    -- For those coin collections that are too large or difficult to keep organized -- 
 
 ## Available Scripts
 
