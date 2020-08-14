@@ -1,7 +1,13 @@
-import React from 'react';
-import { MDBNavItem, MDBIcon, MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBNavLink } from 'mdbreact';
+import React, { Component } from 'react';
+import {  MDBNavItem, 
+          MDBIcon, 
+          MDBDropdown, 
+          MDBDropdownToggle, 
+          MDBDropdownMenu, 
+          MDBDropdownItem, 
+          MDBNavLink } from 'mdbreact';
 
-class SignedInLinks extends React.Component {
+class SignedInLinks extends Component {
   render() {
     return (
       <>            
