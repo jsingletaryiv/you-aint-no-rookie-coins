@@ -5,7 +5,17 @@
  *
 */
 
-// Sign-In
-.sign-in-container, .sign-up-container  {
+// App Main
+.app-container {
+  max-width: 75vw;
+}
+
+// Containers
+.about-container, .sign-in-container, .sign-up-container {
   margin-top: 25vh;
+}
+
+// Dashboard
+.dashboard-container {
+  margin-top: 20vh;
 }
