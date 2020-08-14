@@ -4,7 +4,8 @@ import ReactDOM from 'react-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
-import './index.css';
+import './styles/css/index.css';
+import './styles/css/styles.min.css'
 
 import * as serviceWorker from './serviceWorker';
 import App from './app';

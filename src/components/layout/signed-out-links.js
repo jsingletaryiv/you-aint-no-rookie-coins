@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { MDBNavItem, MDBNavLink } from 'mdbreact';
 
-class SignedOutLinks extends React.Component {
+class SignedOutLinks extends Component {
   render() {
     return (
       <>
