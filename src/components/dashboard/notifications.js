@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { MDBContainer } from 'mdbreact';
+// import { MDBContainer } from 'mdbreact';
 
 const Notifications = () => {
   return (

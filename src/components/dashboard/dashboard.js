@@ -8,14 +8,14 @@ import CoinList from '../views/coin-list';
 class Dashboard extends Component {
   render(){
     return (
-      <div style={{ paddingTop: "60px" }}>
-        <MDBContainer fluid>
+      <>
+        <MDBContainer fluid className="dashboard-container">
           <MDBRow>
-            <MDBCol className="mx-auto" sm="12" md="6">
+            <MDBCol className="mx-auto" sm="12" md="7">
               <CoinList />
             </MDBCol>
 
-            <MDBCol sm="12" md="6">
+            <MDBCol sm="12" md="5">
               <Notifications />
             </MDBCol>
 
@@ -23,7 +23,7 @@ class Dashboard extends Component {
           
         </MDBContainer>
 
-      </div>
+      </>
 
     )
 
