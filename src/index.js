@@ -1,19 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+
+import thunk from 'redux-thunk';
+
+import App from './app';
+import rootReducer from './store/reducers/root-reducer';
+
+import * as serviceWorker from './serviceWorker';
+
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import './styles/css/index.css';
-import './styles/css/styles.min.css'
+import './styles/css/styles.min.css';
 
-import * as serviceWorker from './serviceWorker';
-import App from './app';
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
 ReactDOM.render(
-  <React.StrictMode>
+  // <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
+  // </React.StrictMode>,
   document.getElementById('root')
 );
 

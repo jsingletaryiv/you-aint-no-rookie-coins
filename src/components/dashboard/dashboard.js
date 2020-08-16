@@ -1,21 +1,25 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import { MDBContainer, MDBRow, MDBCol } from 'mdbreact';
 
 import Notifications from './notifications';
 import CoinList from '../views/coin-list';
 
+
 class Dashboard extends Component {
   render(){
+    // console.log(this.props);
+    const { coins } = this.props;
     return (
-      <div style={{ paddingTop: "60px" }}>
-        <MDBContainer fluid>
+      <>
+        <MDBContainer fluid className="dashboard-container">
           <MDBRow>
-            <MDBCol className="mx-auto" sm="12" md="6">
-              <CoinList />
+            <MDBCol className="mx-auto" sm="12" md="7">
+              <CoinList coins={coins} />
             </MDBCol>
 
-            <MDBCol sm="12" md="6">
+            <MDBCol sm="12" md="5">
               <Notifications />
             </MDBCol>
 
@@ -23,7 +27,7 @@ class Dashboard extends Component {
           
         </MDBContainer>
 
-      </div>
+      </>
 
     )
 
@@ -31,4 +35,10 @@ class Dashboard extends Component {
 
 }
 
-export default Dashboard;
+const mapStateToProps = (state) => {
+  return {
+    coins: state.coin.coins
+  }
+}
+
+export default connect(mapStateToProps)(Dashboard);
