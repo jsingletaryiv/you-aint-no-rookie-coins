@@ -4,15 +4,14 @@ import { MDBCol } from 'mdbreact';
 
 import CoinSummary from './coin-summary';
 
-const CoinList = () => {
+const CoinList = ({coins}) => {
   return (
     <section className="text-center my-5">
       <MDBCol sm="12" md="12" lg="6" className="mb-lg-0 mb-4 mx-auto">
         <div className="mx-auto">
-          <CoinSummary />
-          <CoinSummary />
-          <CoinSummary />
-          <CoinSummary />
+          { coins && coins.map(coin => {
+            return <CoinSummary coin={coin} key={coin.id} />
+          }) }
 
         </div>
 
