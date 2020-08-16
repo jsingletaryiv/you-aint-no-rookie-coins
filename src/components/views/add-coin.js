@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import {
   MDBContainer,
@@ -7,6 +8,8 @@ import {
   MDBBtn,
   MDBCard,
   MDBCardBody } from 'mdbreact';
+
+import { newCoin } from '../../store/actions/coin-actions';
 
 class AddCoin extends Component {
   state = {
@@ -20,7 +23,8 @@ class AddCoin extends Component {
   }
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state);
+    // console.log(this.state);
+    this.props.create(this.state);
   }
   render() {
     return (
@@ -66,4 +70,10 @@ class AddCoin extends Component {
 
 }
 
-export default AddCoin;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    create: (coin) => dispatch(newCoin(coin))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(AddCoin);

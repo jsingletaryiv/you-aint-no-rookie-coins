@@ -7,6 +7,19 @@ const initState = {
 };
 
 const coinReducer = (state = initState, action) => {
+  switch (action.type) {
+    case 'CREATE_COIN':
+      console.log('Coin Created', action.coin);
+      break;
+    case 'UPDATE_COIN':
+      console.log('Coin Updated', action.coin);
+      break;
+    case 'DELETE_COIN':
+      console.log('Coin Deleted', action.coin);
+      break;
+    default:
+      // No Default 
+  }
   return state;
 
 }
